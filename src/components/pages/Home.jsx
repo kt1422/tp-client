@@ -9,14 +9,18 @@ import Img2 from "../../assets/img/img2.jpg";
 import Img3 from "../../assets/img/img3.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { setTitle } from '../../assets/js/script.js';
+
 const Home = () => {
+    setTitle('Timeplus - Home');
+    const page = "home";
     useEffect(() => {
         AOS.init();
       }, [])
 
     return(
         <div>
-            <Nav></Nav>
+            <Nav page={page}></Nav>
             <div className="banner bg-white">
                 <div id="carousel-banner" className="carousel slide carousel-dark h-100" data-bs-ride="carousel">
                     <div className="carousel-indicators">
@@ -26,18 +30,18 @@ const Home = () => {
                     </div>
                     <div className="carousel-inner h-100">
                         <div className="carousel-item active h-100" data-bs-interval="5000">
-                            <div className="d-flex justify-content-center">
-                                <img src={bg3} className="d-block" style={{height:"88vh"}} alt="..."/>
+                            <div className="d-flex justify-content-center align-items-center h-100">
+                                <img src={bg3} className="d-block banner-pic" alt="..."/>
                             </div>
                         </div>
                         <div className="carousel-item" data-bs-interval="5000">
-                            <div className="d-flex justify-content-center">
-                                <img src={bg2} className="d-block" style={{height:"88vh"}} alt="..."/>
+                            <div className="d-flex justify-content-center align-items-center h-100">
+                                <img src={bg2} className="d-block banner-pic" alt="..."/>
                             </div>
                         </div>
                         <div className="carousel-item" data-bs-interval="5000">
-                            <div className="d-flex justify-content-center">
-                                <img src={bg1} className="d-block" style={{height:"88vh"}} alt="..."/>
+                            <div className="d-flex justify-content-center align-items-center h-100">
+                                <img src={bg1} className="d-block banner-pic" alt="..."/>
                             </div>
                         </div>
                     </div>
@@ -124,7 +128,8 @@ const Home = () => {
                 </div>
             </div>
             <div className="parallax1 d-flex pje">
-                <div className="text-white col-6 d-flex align-items-center px-5">
+                <div className="text-white col-6 d-flex flex-column justify-content-center align-items-center gap-2 p-5">
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, modi.</h1>
                     <p className="fs-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, sunt debitis accusamus, quis alias deserunt aliquid doloribus vitae aliquam facere voluptas distinctio porro quidem, laborum incidunt! Totam quia ipsam repellat nihil sed, itaque placeat, vitae veniam magni aspernatur iste doloremque consectetur temporibus at corrupti molestiae? Laborum et sed voluptas iusto.</p>
                 </div>
             </div>

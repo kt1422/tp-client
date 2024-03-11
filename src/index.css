@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
 .menu {
     font-weight: bold;
     font-size: 16px;
@@ -5,11 +11,11 @@
 }
 
 .nav1{
-    height: 12vh;;
+    height: 70px;
 }
 
-.banner{
-    height: 88vh;
+.banner, .banner-pic{
+    height: calc(100vh - 70px);
 }
 
 .banner2{
@@ -40,9 +46,9 @@
     min-height: 100vh;
 
     background-attachment: fixed;
-    background-position: center;
+    /* background-position:center; */
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 
 .parallax2 {
@@ -114,4 +120,48 @@ form input, form textarea {
     color: #000000;
     font-size: 18px;
     border-radius: 6px;
+}
+
+.aboutus {
+    background-image: url("./assets/img/aboutus-banner.png");
+    height: calc(100vh - 70px);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.aboutus-herotxt {
+    padding: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.aboutus-second {
+    background-image: url("./assets/img/aboutus-second.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutus-margins {
+    padding: 300px 100px 0px 100px;
+}
+
+.aboutus-txt {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.aboutus-third {
+    background-image: url("./assets/img/aboutus-third.png");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txtbg {
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9);
+    width: 1000px;
 }

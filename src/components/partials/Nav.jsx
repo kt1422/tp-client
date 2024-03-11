@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.jpg";
-const Nav = () => {
+
+const Nav = (props) => {
     return (
         <nav className="navbar navbar-expand-lg sticky-top bg-white shadow nav1" data-bs-theme="light">
             <div className="container-lg">
@@ -19,16 +20,16 @@ const Nav = () => {
                     </ul>
                     <div className="navbar-nav">
                         <li className="nav-item me-4">
-                            <Link className="nav-link menu home-page active" to={"/home"}>HOME</Link>
+                            <Link className={`nav-link menu ${props.page=="home"?"active":""}`} to={"/home"}>HOME</Link>
                         </li>
                         <li className="nav-item me-4">
-                            <Link className="nav-link tech-page menu" to={"/aboutus"}>ABOUT US</Link>
+                            <Link className={`nav-link menu ${props.page=="about"?"active":""}`} to={"/aboutus"}>ABOUT US</Link>
                         </li>
                         <li className="nav-item me-4">
-                            <Link className="nav-link menu project-page" to={"/services"}>SERVICES</Link>
+                            <Link className={`nav-link menu ${props.page=="products"?"active":""}`} to={"/products"}>PRODUCTS</Link>
                         </li>
                         <li className="nav-item me-4">
-                            <Link className="nav-link menu contact-page" to={"/contactus"}>CONTACT US</Link>
+                            <Link className={`nav-link menu ${props.page=="contact"?"active":""}`} to={"/contactus"}>CONTACT US</Link>
                         </li>
                     </div>
                 </div>
